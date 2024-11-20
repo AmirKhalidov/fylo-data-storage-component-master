@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link href="./output.css" rel="stylesheet" />
+        <title>Fylo Storage Component</title>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <style>
+            body {
+                background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-desktop-0K1QUmseyFKBaLBpk1ca6sQpbI1vwX.png');
+                background-repeat: no-repeat;
+                background-size: 100% 50%;
+                background-position: bottom;
+            }
+
+            @media (max-width: 768px) {
+                body {
+                    background-image: url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bg-mobile-ozy6Sbiur1QWd3CUSM9gxy9Q7hFLgr.png');
+                    background-size: cover;
+                }
+            }
+
+            .progress {
+                background-color: #0c122c;
+            }
+            .progress::-webkit-progress-bar {
+                background-color: #0c122c;
+                border-radius: 9999px;
+                height: 15px;
+                margin-top: 2px;
+                margin-left: 1px;
+            }
+
+            .progress::-webkit-progress-value {
+                background: linear-gradient(to right, #ffa399, #ff4d97);
+                border-radius: 9999px;
+            }
+        </style>
+    </head>
+    <body
+        class="min-h-screen bg-[#0c122c] flex items-center justify-center p-6 font-['Railway']"
+    >
+        <main
+            class="w-full max-w-5xl flex flex-col md:flex-row items-center md:items-end gap-4 md:gap-8"
+        >
+            <!-- Left Container -->
+            <div
+                class="w-full md:w-[380px] bg-[#1d2c67] rounded-lg md:rounded-tl-3xl rounded-tr-[100px] md:rounded-bl-xl md:rounded-br-xl p-10 lg:pr-36 md:pr-20"
+            >
+                <img
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-ZcyOxD2TMKRd7kUQweL53rXnDkH63v.svg"
+                    alt="Fylo"
+                    class="h-12 mb-8"
+                />
+                <div class="flex items-center gap-4 mt-8">
+                    <!-- Document Icon -->
+                    <button
+                        class="bg-[#0c122c] p-3 rounded-lg w-12 h-12 flex items-center justify-center"
+                    >
+                        <img
+                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-document-YBdMIbKoWexGZfr6I94cueKxINeWzQ.svg"
+                            alt="Document"
+                            class="w-6 h-6"
+                        />
+                    </button>
+                    <!-- Folder Icon -->
+                    <button
+                        class="bg-[#0c122c] p-3 rounded-lg w-12 h-12 flex items-center justify-center"
+                    >
+                        <img
+                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-folder-nQIvj0mboLtcWLLNIRz0PJkHe0yBLj.svg"
+                            alt="Folder"
+                            class="w-6 h-6"
+                        />
+                    </button>
+                    <!-- Upload Icon -->
+                    <button
+                        class="bg-[#0c122c] p-3 rounded-lg w-12 h-12 flex items-center justify-center"
+                    >
+                        <img
+                            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/icon-upload-jFVbTF5GXAYH9zGXx2kVIq7jOGxpHV.svg"
+                            alt="Upload"
+                            class="w-6 h-6"
+                        />
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Container -->
+            <div
+                class="w-full bg-[#1d2c67] rounded-lg md:rounded-xl p-8 relative"
+            >
+                <!-- GB Left Indicator -->
+                <div
+                    class="bg-white absolute top-32 left-[50%] -translate-x-[50%] md:-translate-x-[0%] md:-top-1/3 md:right-8 px-6 py-4 rounded-lg md:rounded-t-lg md:rounded-br-none flex items-center gap-2 md:before:content-[''] md:before:absolute md:before:bottom-0 md:before:right-0 md:before:translate-y-full md:before:border-l-[20px] md:before:border-l-transparent md:before:border-t-[20px] md:before:border-t-white"
+                >
+                    <span class="xl:text-5xl lg:text-4xl text-4xl font-bold text-[#0c122c]">185</span>
+                    <span class="text-[#848794] uppercase text-sm font-bold"
+                        >GB Left</span
+                    >
+                </div>
+
+                <p class="text-[#848794] text-sm mb-4">
+                    You've used
+                    <span class="text-[#dddbff] font-bold">815 GB</span> of your
+                    storage
+                </p>
+
+                <!-- Progress Bar -->
+                <div class="relative mb-3">
+                    <progress
+                        class="progress w-full h-5 rounded-full"
+                        value="815"
+                        max="1000"
+                    ></progress>
+                    <div class="flex justify-between text-white text-xs mt-2">
+                        <span class="text-[#dddbff]">0 GB</span>
+                        <span class="text-[#dddbff]">1000 GB</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
